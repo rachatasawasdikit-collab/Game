@@ -967,303 +967,108 @@
         @media (max-width: 1024px) {
             .group-info {
                 width: 280px;
-                right: 15px;
-                bottom: 15px;
             }
         }
         
+        /* ซ่อนเมื่อหน้าจอเล็กมาก เพื่อไม่ให้บังเนื้อหา */
         @media (max-width: 768px) {
             .group-info {
-                width: 250px;
-                padding: 12px;
-                right: 10px;
-                bottom: 10px;
-                max-height: 350px;
+                display: none;
             }
-            
-            .member-name {
-                font-size: 0.85rem;
-            }
-            
-            .member-id {
-                font-size: 0.75rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .group-info {
-                position: relative;
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                max-width: 350px;
-                margin: 20px auto;
-                opacity: 1;
-                transform: none !important;
-            }
-            
-            .group-info:hover {
-                transform: none !important;
-            }
-        }
-        
-        /* Animation สำหรับกรอบสมาชิกกลุ่ม */
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 0.85;
-                transform: translateX(0);
-            }
-        }
-        
-        .group-info {
-            animation: slideInRight 0.5s ease-out;
-        }
-        
-        /* Badge สำหรับจำนวนสมาชิก */
-        .group-header::after {
-            content: '7';
-            background: #FF9800;
-            color: white;
-            font-size: 0.8rem;
-            padding: 2px 8px;
-            border-radius: 10px;
-            margin-left: auto;
-            font-weight: bold;
-        }
-
-        /* Celebration Animation */
-        .confetti {
-            position: fixed;
-            width: 15px;
-            height: 15px;
-            background: var(--accent);
-            top: -20px;
-            z-index: 1000;
         }
 
         /* Responsive Design */
         @media (max-width: 992px) {
-            .game-modes {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .options-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .result-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .game-modes { grid-template-columns: repeat(2, 1fr); }
+            .options-grid { grid-template-columns: repeat(2, 1fr); }
+            .result-stats { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .game-modes {
-                grid-template-columns: 1fr;
-            }
-            
-            .options-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                justify-content: center;
-            }
-            
-            .stat-box {
-                min-width: 120px;
-                padding: 12px 20px;
-            }
-            
-            .math-expression {
-                font-size: 2rem;
-            }
-            
-            .btn {
-                min-width: 160px;
-                padding: 14px 24px;
-            }
-            
-            .result-stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .formulas-grid {
-                grid-template-columns: 1fr;
-            }
+            .container { padding: 15px; }
+            .game-modes { grid-template-columns: 1fr; }
+            .options-grid { grid-template-columns: 1fr; }
+            .stats { justify-content: center; }
+            .stat-box { min-width: 120px; padding: 12px 20px; }
+            .math-expression { font-size: 2rem; }
+            .btn { min-width: 160px; padding: 14px 24px; }
+            .result-stats { grid-template-columns: 1fr; }
+            .formulas-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 1.8rem;
-            }
-            
-            .game-title {
-                font-size: 1.5rem;
-            }
-            
-            .question-text {
-                font-size: 1.3rem;
-            }
-            
-            .math-expression {
-                font-size: 1.8rem;
-            }
-            
-            .controls {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
+            .logo h1 { font-size: 1.8rem; }
+            .game-title { font-size: 1.5rem; }
+            .question-text { font-size: 1.3rem; }
+            .math-expression { font-size: 1.8rem; }
+            .controls { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; }
         }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(45deg, var(--accent), var(--primary));
-        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, var(--primary), var(--accent)); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(45deg, var(--accent), var(--primary)); }
 
         /* Loading Animation */
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid var(--light);
-            border-top: 5px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        .loading { display: flex; justify-content: center; align-items: center; height: 200px; }
+        .spinner { width: 50px; height: 50px; border: 5px solid var(--light); border-top: 5px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
         /* Achievement Badges */
-        .achievement {
-            display: inline-block;
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            color: #856404;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            margin: 5px;
-            font-size: 0.9rem;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Difficulty Indicator */
-        .difficulty-indicator {
-            display: flex;
-            gap: 5px;
-            margin-top: 10px;
-        }
-
-        .difficulty-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-        }
-
-        .difficulty-dot.active {
-            background: var(--accent);
-        }
-
-        /* Timer Animation */
-        .timer-pulse {
-            animation: timerPulse 1s infinite;
-        }
-
-        @keyframes timerPulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
+        .achievement { display: inline-block; background: linear-gradient(45deg, #ffd700, #ffed4e); color: #856404; padding: 8px 16px; border-radius: 20px; font-weight: bold; margin: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes popIn { from { transform: scale(0); } to { transform: scale(1); } }
     </style>
 </head>
 <body>
-    <!-- Group Info Box -->
     <div class="group-info">
         <div class="group-header">
-            <i class="fas fa-users"></i>
-            สมาชิกกลุ่มคณิตศาสตร์
+            <i class="fas fa-users"></i> สมาชิกกลุ่ม
         </div>
         <div class="members">
             <div class="member-row">
                 <span class="member-number">1.</span>
+                <span class="member-name">นายรชต สวัสดิกิจ</span>
+                <span class="member-id">เลขที่ 23 </span>
+            </div>
+            <div class="member-row">
+                <span class="member-number">2.</span>
                 <span class="member-name">นางสาวธัญพิชชา เพ็งจันทร์</span>
                 <span class="member-id">เลขที่ 33</span>
             </div>
             <div class="member-row">
-                <span class="member-number">2.</span>
+                <span class="member-number">3.</span>
                 <span class="member-name">นางสาวบุญขวัญ พี่ใหญ่</span>
                 <span class="member-id">เลขที่ 34</span>
             </div>
             <div class="member-row">
-                <span class="member-number">3.</span>
+                <span class="member-number">4.</span>
                 <span class="member-name">นางสาวบุณยวีร์ ศรีวิรานนท์</span>
                 <span class="member-id">เลขที่ 35</span>
             </div>
             <div class="member-row">
-                <span class="member-number">4.</span>
+                <span class="member-number">5.</span>
                 <span class="member-name">นางสาวภัชชา จั่นวิลัย</span>
                 <span class="member-id">เลขที่ 36</span>
             </div>
             <div class="member-row">
-                <span class="member-number">5.</span>
+                <span class="member-number">6.</span>
                 <span class="member-name">นางสาวสุวรินทร์ พรมพิมล</span>
                 <span class="member-id">เลขที่ 37</span>
             </div>
             <div class="member-row">
-                <span class="member-number">6.</span>
+                <span class="member-number">7.</span>
                 <span class="member-name">นางสาวกัญญาวีร์ เจียมวาง</span>
                 <span class="member-id">เลขที่ 38</span>
             </div>
-            <div class="member-row">
-                <span class="member-number">7.</span>
-                <span class="member-name">นายรชต สวัสดิกิจ</span>
-                <span class="member-id">เลขที่ 23</span>
-            </div>
         </div>
         <div class="class-info">
-            <i class="fas fa-graduation-cap"></i>
-            กลุ่มคณิตศาสตร์ ม.4
+            <i class="fas fa-graduation-cap"></i> กลุ่มคณิตศาสตร์ ม.4
         </div>
     </div>
 
     <div class="container">
-        <!-- Header -->
         <header>
             <div class="logo">
                 <i class="fas fa-calculator"></i>
@@ -1273,7 +1078,6 @@
             <p class="subtitle">ฝึกฝนทักษะการคำนวณเลขยกกำลังตามหลักสูตร สสวท. ครอบคลุมทุกหัวข้อที่นักเรียน ม.4 ต้องรู้</p>
         </header>
 
-        <!-- Game Modes -->
         <div class="game-modes">
             <div class="mode-card active" data-mode="basic">
                 <div class="mode-icon">
@@ -1288,6 +1092,7 @@
                 </div>
                 <span class="mode-difficulty easy">ระดับง่าย</span>
             </div>
+
             <div class="mode-card" data-mode="algebra">
                 <div class="mode-icon">
                     <i class="fas fa-brain"></i>
@@ -1301,6 +1106,7 @@
                 </div>
                 <span class="mode-difficulty medium">ระดับปานกลาง</span>
             </div>
+
             <div class="mode-card" data-mode="challenge">
                 <div class="mode-icon">
                     <i class="fas fa-trophy"></i>
@@ -1314,24 +1120,23 @@
                 </div>
                 <span class="mode-difficulty hard">ระดับยาก</span>
             </div>
+
             <div class="mode-card" data-mode="exam">
                 <div class="mode-icon">
                     <i class="fas fa-file-alt"></i>
                 </div>
                 <h3 class="mode-title">แบบทดสอบปลายภาค</h3>
-                <p class="mode-desc">ทดสอบความรู้ครบทุกหัวข้อ ม.4</p>
+                <p class="mode-desc">รวมโจทย์ทุกรูปแบบ จับเวลาข้อละ 1 นาที</p>
                 <div class="difficulty-indicator">
                     <span class="difficulty-dot active"></span>
                     <span class="difficulty-dot active"></span>
                     <span class="difficulty-dot active"></span>
                 </div>
-                <span class="mode-difficulty expert">ระดับเชี่ยวชาญ</span>
+                <span class="mode-difficulty expert">ระดับผู้เชี่ยวชาญ</span>
             </div>
         </div>
 
-        <!-- Main Game Area -->
         <div class="game-area" id="gameArea">
-            <!-- Game Header -->
             <div class="game-header">
                 <h2 class="game-title">
                     <i class="fas fa-gamepad"></i>
@@ -1369,51 +1174,46 @@
                 </div>
             </div>
 
-            <!-- Progress Bar -->
             <div class="progress-container">
                 <div class="progress-header">
                     <span>ความคืบหน้า</span>
-                    <span id="progressText">0/10</span>
+                    <span id="progressText">0/0</span>
                 </div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
             </div>
 
-            <!-- Question Area -->
             <div class="question-area">
                 <div class="question-number" id="questionNumber">ข้อที่ 1</div>
-                <div class="question-text" id="questionText">กำลังโหลดคำถาม...</div>
+                <h3 class="question-text" id="questionText">คำถามจะปรากฏที่นี่</h3>
+                
                 <div class="math-expression-container">
-                    <span class="expression-label">นิพจน์ทางคณิตศาสตร์:</span>
-                    <div class="math-expression" id="mathExpression"></div>
+                    <span class="expression-label">โจทย์:</span>
+                    <div class="math-expression" id="mathExpression">a²</div>
+                </div>
+
+                <div class="options-grid" id="optionsGrid">
+                    </div>
+
+                <div class="hint-box" id="hintBox">
+                    <div class="hint-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>คำใบ้:</h3>
+                    </div>
+                    <p id="hintContent">เนื้อหาคำใบ้</p>
+                </div>
+
+                <div class="explanation-box" id="explanationBox">
+                    <div class="explanation-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>คำอธิบายและเฉลยละเอียด:</h3>
+                    </div>
+                    <div class="explanation-content" id="explanationContent">
+                        </div>
                 </div>
             </div>
 
-            <!-- Options Grid -->
-            <div class="options-grid" id="optionsGrid">
-                <!-- Options will be generated by JavaScript -->
-            </div>
-
-            <!-- Hint Box -->
-            <div class="hint-box" id="hintBox">
-                <div class="hint-header">
-                    <i class="fas fa-lightbulb"></i>
-                    <strong>คำใบ้:</strong>
-                </div>
-                <div id="hintContent"></div>
-            </div>
-
-            <!-- Explanation Box -->
-            <div class="explanation-box" id="explanationBox">
-                <div class="explanation-header">
-                    <i class="fas fa-book-open"></i>
-                    <h3>คำอธิบายและวิธีทำ</h3>
-                </div>
-                <div class="explanation-content" id="explanationContent"></div>
-            </div>
-
-            <!-- Controls -->
             <div class="controls">
                 <button class="btn btn-success" id="submitBtn" disabled>
                     <i class="fas fa-check"></i> ยืนยันคำตอบ
@@ -1430,7 +1230,6 @@
             </div>
         </div>
 
-        <!-- Formula Reference -->
         <div class="formula-box">
             <h3 class="formula-title">
                 <i class="fas fa-book"></i> สูตรเลขยกกำลังที่ต้องรู้สำหรับ ม.4
@@ -1449,58 +1248,44 @@
                 <div class="formula-item">11. a⁻ᵐ/ⁿ = 1/(ⁿ√(aᵐ))</div>
                 <div class="formula-item">12. a¹ = a</div>
             </div>
-            <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 10px;">
-                <p style="color: #666; font-size: 0.95rem;">
-                    <i class="fas fa-info-circle" style="color: var(--primary);"></i>
-                    <strong>เทคนิคการจำ:</strong> เมื่อคูณเลขยกกำลังฐานเดียวกัน ให้นำเลขชี้กำลังมาบวกกัน เมื่อหารให้นำเลขชี้กำลังมาลบกัน
-                </p>
+            <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid var(--accent);">
+                <i class="fas fa-exclamation-circle" style="color: var(--accent);"></i> 
+                <strong>ข้อควรระวัง:</strong> 
+                อย่าลืมว่า 0⁰ ไม่นิยามทางคณิตศาสตร์ และฐานของเลขยกกำลังต้องเป็นจำนวนจริง
             </div>
         </div>
     </div>
 
-    <!-- Celebration Confetti Container -->
-    <div id="confettiContainer"></div>
-
     <script>
-        // ข้อมูลคำถามตามหลักสูตร ม.4 แบบละเอียด - แก้ไขแล้ว
-        const questionDatabase = {
+        // ข้อมูลคำถามสำหรับแต่ละโหมด
+        const questionData = {
             basic: [
                 {
-                    question: "2⁵ มีค่าเท่ากับเท่าใด?",
+                    question: "ข้อใดมีค่าเท่ากับ 2⁵?",
                     expression: "2⁵",
-                    options: ["10", "16", "32", "64"],
+                    options: ["10", "25", "32", "64"],
                     correct: 2,
-                    explanation: "2⁵ = 2 × 2 × 2 × 2 × 2 = 32",
-                    hint: "ลองคูณ 2 ด้วยตัวเอง 5 ครั้ง",
+                    explanation: "2⁵ หมายถึง 2 คูณกัน 5 ตัว คือ 2 × 2 × 2 × 2 × 2 = 32",
+                    hint: "2 × 2 = 4, 4 × 2 = 8, ...",
                     formulaUsed: "aⁿ = a × a × ... × a (n ครั้ง)",
                     timeLimit: 30
                 },
                 {
-                    question: "3⁴ มีค่าเท่ากับเท่าใด?",
-                    expression: "3⁴",
-                    options: ["12", "27", "64", "81"],
-                    correct: 3,
-                    explanation: "3⁴ = 3 × 3 × 3 × 3 = 81",
-                    hint: "3⁴ = 3² × 3² = 9 × 9 = 81",
-                    formulaUsed: "aⁿ = a × a × ... × a (n ครั้ง)",
-                    timeLimit: 30
-                },
-                {
-                    question: "5² × 5³ มีค่าเท่ากับข้อใด?",
-                    expression: "5² × 5³",
-                    options: ["5⁵", "5⁶", "25⁵", "10⁵"],
+                    question: "3² × 3³ มีค่าเท่ากับข้อใด?",
+                    expression: "3² × 3³",
+                    options: ["3⁵", "3⁶", "9⁵", "9⁶"],
                     correct: 0,
-                    explanation: "ตามสูตร aᵐ × aⁿ = aᵐ⁺ⁿ ดังนั้น 5² × 5³ = 5²⁺³ = 5⁵ = 3125",
+                    explanation: "ตามสูตร aᵐ × aⁿ = aᵐ⁺ⁿ ดังนั้น 3² × 3³ = 3²⁺³ = 3⁵",
                     hint: "ฐานเดียวกันให้นำเลขชี้กำลังมาบวกกัน",
                     formulaUsed: "aᵐ × aⁿ = aᵐ⁺ⁿ",
-                    timeLimit: 40
+                    timeLimit: 35
                 },
                 {
-                    question: "7⁴ ÷ 7² มีค่าเท่ากับเท่าใด?",
-                    expression: "7⁴ ÷ 7²",
-                    options: ["7²", "7⁶", "14²", "49"],
-                    correct: 0,
-                    explanation: "ตามสูตร aᵐ ÷ aⁿ = aᵐ⁻ⁿ ดังนั้น 7⁴ ÷ 7² = 7⁴⁻² = 7² = 49",
+                    question: "5⁴ ÷ 5² มีค่าเท่ากับข้อใด?",
+                    expression: "5⁴ ÷ 5²",
+                    options: ["1", "5²", "5⁶", "25"],
+                    correct: 1,
+                    explanation: "ตามสูตร aᵐ ÷ aⁿ = aᵐ⁻ⁿ ดังนั้น 5⁴ ÷ 5² = 5⁴⁻² = 5² = 25",
                     hint: "ฐานเดียวกันให้นำเลขชี้กำลังมาลบกัน",
                     formulaUsed: "aᵐ ÷ aⁿ = aᵐ⁻ⁿ",
                     timeLimit: 40
@@ -1546,43 +1331,43 @@
                     timeLimit: 30
                 },
                 {
-                    question: "2⁰ + 3⁰ + 5⁰ มีค่าเท่ากับเท่าใด?",
-                    expression: "2⁰ + 3⁰ + 5⁰",
-                    options: ["0", "1", "2", "3"],
+                    question: "(-3)² มีค่าเท่ากับเท่าใด?",
+                    expression: "(-3)²",
+                    options: ["-6", "-9", "6", "9"],
                     correct: 3,
-                    explanation: "ตามสูตร a⁰ = 1 (เมื่อ a ≠ 0) ดังนั้น 2⁰ = 1, 3⁰ = 1, 5⁰ = 1 รวมเป็น 3",
-                    hint: "จำนวนใด ๆ ที่ยกกำลัง 0 (ยกเว้น 0) มีค่าเท่ากับ 1",
-                    formulaUsed: "a⁰ = 1 (a ≠ 0)",
-                    timeLimit: 45
+                    explanation: "(-3)² = (-3) × (-3) = 9 (ลบคูณลบเป็นบวก)",
+                    hint: "จำนวนลบยกกำลังคู่จะได้ค่าบวก",
+                    formulaUsed: "(-a)²ⁿ = a²ⁿ",
+                    timeLimit: 40
                 },
                 {
-                    question: "9¹ มีค่าเท่ากับเท่าใด?",
-                    expression: "9¹",
-                    options: ["0", "1", "9", "81"],
-                    correct: 2,
-                    explanation: "ตามสูตร a¹ = a ดังนั้น 9¹ = 9",
-                    hint: "จำนวนใด ๆ ที่ยกกำลัง 1 มีค่าเท่ากับตัวมันเอง",
-                    formulaUsed: "a¹ = a",
+                    question: "-3² มีค่าเท่ากับเท่าใด?",
+                    expression: "-3²",
+                    options: ["-6", "-9", "6", "9"],
+                    correct: 1,
+                    explanation: "-3² = -(3 × 3) = -9 (สังเกตว่าเครื่องหมายลบอยู่นอกการยกกำลัง)",
+                    hint: "ยกกำลังก่อนแล้วค่อยติดลบ",
+                    formulaUsed: "-aⁿ ≠ (-a)ⁿ",
+                    timeLimit: 40
+                },
+                {
+                    question: "7⁰ มีค่าเท่ากับเท่าใด?",
+                    expression: "7⁰",
+                    options: ["0", "1", "7", "หาค่าไม่ได้"],
+                    correct: 1,
+                    explanation: "จำนวนใดๆ (ที่ไม่ใช่ศูนย์) ยกกำลังศูนย์เท่ากับ 1",
+                    hint: "a⁰ = 1 เมื่อ a ≠ 0",
+                    formulaUsed: "a⁰ = 1",
                     timeLimit: 25
                 }
             ],
             algebra: [
                 {
-                    question: "ถ้า x² = 25 แล้ว x มีค่าเท่าใด? (x > 0)",
-                    expression: "x² = 25",
-                    options: ["2", "5", "10", "25"],
-                    correct: 1,
-                    explanation: "x² = 25 → x = √25 = 5 (x > 0)",
-                    hint: "หารากที่สองของ 25",
-                    formulaUsed: "ถ้า x² = a แล้ว x = ±√a",
-                    timeLimit: 40
-                },
-                {
-                    question: "a³ × a⁴ มีค่าเท่ากับข้อใด?",
-                    expression: "a³ × a⁴",
-                    options: ["a⁷", "a¹²", "a", "a⁻¹"],
+                    question: "x³ × x⁴ มีค่าเท่ากับข้อใด?",
+                    expression: "x³ × x⁴",
+                    options: ["x⁷", "x¹²", "2x⁷", "x"],
                     correct: 0,
-                    explanation: "ตามสูตร aᵐ × aⁿ = aᵐ⁺ⁿ ดังนั้น a³ × a⁴ = a³⁺⁴ = a⁷",
+                    explanation: "ตามสูตร aᵐ × aⁿ = aᵐ⁺ⁿ ดังนั้น x³ × x⁴ = x³⁺⁴ = x⁷",
                     hint: "ฐานเดียวกันให้นำเลขชี้กำลังมาบวกกัน",
                     formulaUsed: "aᵐ × aⁿ = aᵐ⁺ⁿ",
                     timeLimit: 35
@@ -1623,64 +1408,54 @@
                     options: ["a³/b", "a/b³", "a³/b³", "3a/3b"],
                     correct: 2,
                     explanation: "ตามสูตร (a/b)ⁿ = aⁿ/bⁿ ดังนั้น (a/b)³ = a³/b³",
-                    hint: "กระจายเลขชี้กำลังเข้าไปคูณทั้งเศษและส่วน",
+                    hint: "กระจายเลขชี้กำลังเข้าไปทั้งเศษและส่วน",
                     formulaUsed: "(a/b)ⁿ = aⁿ/bⁿ",
                     timeLimit: 45
                 },
                 {
-                    question: "ถ้า 2ⁿ = 32 แล้ว n มีค่าเท่าใด?",
-                    expression: "2ⁿ = 32",
-                    options: ["3", "4", "5", "6"],
-                    correct: 2,
-                    explanation: "32 = 2⁵ ดังนั้น 2ⁿ = 2⁵ → n = 5",
-                    hint: "เขียน 32 ในรูปเลขยกกำลังฐาน 2",
-                    formulaUsed: "ถ้า aᵐ = aⁿ แล้ว m = n",
-                    timeLimit: 50
-                },
-                {
-                    question: "x⁻³ มีค่าเท่ากับข้อใด?",
+                    question: "ข้อใดมีค่าเท่ากับ x⁻³?",
                     expression: "x⁻³",
-                    options: ["-x³", "-3x", "1/x³", "1/3x"],
-                    correct: 2,
+                    options: ["-x³", "1/x³", "-1/x³", "-3x"],
+                    correct: 1,
                     explanation: "ตามสูตร a⁻ⁿ = 1/aⁿ ดังนั้น x⁻³ = 1/x³",
                     hint: "เลขชี้กำลังติดลบให้กลับเศษเป็นส่วน",
                     formulaUsed: "a⁻ⁿ = 1/aⁿ",
                     timeLimit: 40
                 },
                 {
-                    question: "√(x⁴) มีค่าเท่ากับข้อใด? (x ≥ 0)",
-                    expression: "√(x⁴)",
-                    options: ["x", "x²", "x⁴", "x⁸"],
+                    question: "(xy)⁰ มีค่าเท่ากับข้อใด (เมื่อ xy ≠ 0)?",
+                    expression: "(xy)⁰",
+                    options: ["0", "1", "xy", "x"],
                     correct: 1,
-                    explanation: "√(x⁴) = (x⁴)^(1/2) = x⁴×¹/² = x²",
-                    hint: "รากที่สองของ x⁴ คือ x^(4/2) = x²",
-                    formulaUsed: "√(aᵐ) = aᵐ/²",
-                    timeLimit: 55
+                    explanation: "จำนวนใดๆ (ที่ไม่ใช่ศูนย์) ยกกำลังศูนย์เท่ากับ 1",
+                    hint: "อะไรก็ตามยกกำลังศูนย์ได้ 1",
+                    formulaUsed: "a⁰ = 1",
+                    timeLimit: 30
                 },
                 {
-                    question: "∛(y⁶) มีค่าเท่ากับข้อใด?",
-                    expression: "∛(y⁶)",
-                    options: ["y²", "y³", "y⁶", "y¹⁸"],
-                    correct: 0,
-                    explanation: "∛(y⁶) = y⁶/³ = y²",
-                    hint: "รากที่สามของ y⁶ คือ y^(6/3) = y²",
-                    formulaUsed: "∛(aᵐ) = aᵐ/³",
-                    timeLimit: 55
+                    question: "(2a³)(3a²)",
+                    expression: "(2a³)(3a²)",
+                    options: ["5a⁵", "6a⁵", "6a⁶", "5a⁶"],
+                    correct: 1,
+                    explanation: "(2a³)(3a²) = (2×3)(a³×a²) = 6a³⁺² = 6a⁵",
+                    hint: "คูณสัมประสิทธิ์ก่อน แล้วคูณตัวแปรโดยนำเลขชี้กำลังมาบวกกัน",
+                    formulaUsed: "aᵐ × aⁿ = aᵐ⁺ⁿ",
+                    timeLimit: 50
                 }
             ],
             challenge: [
                 {
-                    question: "2¹⁰ - 2⁹ มีค่าเท่าใด?",
-                    expression: "2¹⁰ - 2⁹",
-                    options: ["256", "512", "1024", "2048"],
+                    question: "ถ้า 2ˣ = 32 และ 3ʸ = 27 แล้ว x + y มีค่าเท่าใด?",
+                    expression: "x + y",
+                    options: ["7", "8", "9", "10"],
                     correct: 1,
-                    explanation: "2¹⁰ - 2⁹ = 2⁹(2 - 1) = 2⁹ = 512",
-                    hint: "แยกตัวประกอบร่วม 2⁹ ออกมา",
-                    formulaUsed: "aᵐ - aⁿ = aⁿ(aᵐ⁻ⁿ - 1)",
+                    explanation: "2ˣ = 32 = 2⁵ → x = 5\n3ʸ = 27 = 3³ → y = 3\nดังนั้น x + y = 5 + 3 = 8",
+                    hint: "หาค่า x และ y แยกกันก่อน",
+                    formulaUsed: "ถ้า aᵐ = aⁿ แล้ว m = n",
                     timeLimit: 60
                 },
                 {
-                    question: "√(4³) มีค่าเท่าใด?",
+                    question: "รากที่สองของ 4³ มีค่าเท่าใด?",
                     expression: "√(4³)",
                     options: ["4", "8", "16", "32"],
                     correct: 1,
@@ -1714,55 +1489,25 @@
                     expression: "8^(2/3)",
                     options: ["2", "4", "8", "16"],
                     correct: 1,
-                    explanation: "8^(2/3) = (8^(1/3))² = (∛8)² = 2² = 4",
-                    hint: "คำนวณรากที่สามของ 8 ก่อน แล้วยกกำลังสอง",
+                    explanation: "8^(2/3) = (8^(1/3))² = (³√8)² = 2² = 4",
+                    hint: "เปลี่ยน 8 เป็น 2³ แล้วคำนวณ",
                     formulaUsed: "a^(m/n) = (ⁿ√a)ᵐ",
                     timeLimit: 60
                 },
                 {
-                    question: "16^(-1/2) มีค่าเท่าใด?",
-                    expression: "16^(-1/2)",
-                    options: ["-4", "-1/4", "1/4", "4"],
-                    correct: 2,
-                    explanation: "16^(-1/2) = 1/(16^(1/2)) = 1/√16 = 1/4 = 0.25",
-                    hint: "เลขชี้กำลังติดลบให้กลับเศษเป็นส่วน",
-                    formulaUsed: "a^(-m/n) = 1/(a^(m/n))",
-                    timeLimit: 65
-                },
-                {
-                    question: "(2ⁿ⁺³ - 2ⁿ⁺¹) ÷ 2ⁿ มีค่าเท่าใด?",
-                    expression: "(2ⁿ⁺³ - 2ⁿ⁺¹) ÷ 2ⁿ",
-                    options: ["2", "4", "6", "8"],
-                    correct: 2,
-                    explanation: "(2ⁿ⁺³ - 2ⁿ⁺¹)/2ⁿ = 2ⁿ(2³ - 2¹)/2ⁿ = 8 - 2 = 6",
-                    hint: "แยกตัวประกอบร่วม 2ⁿ ออกมา",
-                    formulaUsed: "aᵐ⁺ⁿ = aᵐ × aⁿ",
-                    timeLimit: 70
-                },
-                {
-                    question: "∛(64²) มีค่าเท่าใด?",
-                    expression: "∛(64²)",
-                    options: ["4", "8", "16", "32"],
-                    correct: 2,
-                    explanation: "∛(64²) = 64^(2/3) = (64^(1/3))² = (∛64)² = 4² = 16",
-                    hint: "64^(2/3) = (∛64)²",
-                    formulaUsed: "∛(aᵐ) = aᵐ/³",
-                    timeLimit: 60
-                },
-                {
-                    question: "√(81² ÷ 9³) มีค่าเท่าใด?",
-                    expression: "√(81² ÷ 9³)",
-                    options: ["3", "9", "27", "81"],
-                    correct: 0,
-                    explanation: "√(81²/9³) = √((9²)²/9³) = √(9⁴/9³) = √(9¹) = √9 = 3",
-                    hint: "เขียน 81 ในรูป 9² ก่อน",
-                    formulaUsed: "√(a/b) = √a/√b และ (aᵐ)ⁿ = aᵐⁿ",
-                    timeLimit: 75
+                    question: "ข้อใดมีค่ามากที่สุด?",
+                    expression: "เปรียบเทียบค่า",
+                    options: ["2⁵⁰", "3⁴⁰", "4³⁰", "5²⁰"],
+                    correct: 1,
+                    explanation: "ทำเลขชี้กำลังให้เท่ากัน (หา ห.ร.ม. ของเลขชี้กำลังคือ 10)\n2⁵⁰ = (2⁵)¹⁰ = 32¹⁰\n3⁴⁰ = (3⁴)¹⁰ = 81¹⁰ (มากที่สุด)\n4³⁰ = (4³)¹⁰ = 64¹⁰\n5²⁰ = (5²)¹⁰ = 25¹⁰",
+                    hint: "ทำเลขชี้กำลังให้เท่ากันโดยดึงตัวร่วมออก",
+                    formulaUsed: "เปรียบเทียบโดยทำเลขชี้กำลังให้เท่ากัน",
+                    timeLimit: 90
                 },
                 {
                     question: "2⁵ × 4³ ÷ 8² มีค่าเท่าใด?",
                     expression: "2⁵ × 4³ ÷ 8²",
-                    options: ["2", "4", "8", "16"],
+                    options: ["16", "32", "64", "128"],
                     correct: 3,
                     explanation: "2⁵ × (2²)³ ÷ (2³)² = 2⁵ × 2⁶ ÷ 2⁶ = 2⁵ = 32",
                     hint: "เขียน 4 และ 8 ในรูปเลขยกกำลังฐาน 2",
@@ -1802,53 +1547,28 @@
                     timeLimit: 60
                 },
                 {
-                    question: "100^(1/2) × 1000^(1/3) มีค่าเท่าใด?",
-                    expression: "√100 × ³√1000",
-                    options: ["10", "20", "100", "200"],
+                    question: "100^(1/2) × 1000^(1/3)",
+                    expression: "100^(1/2) × 1000^(1/3)",
+                    options: ["10", "100", "1000", "1"],
                     correct: 1,
-                    explanation: "√100 = 10, ³√1000 = 10, 10 × 10 = 100",
-                    hint: "คำนวณแต่ละส่วนแยกกันแล้วคูณกัน",
+                    explanation: "100^(1/2) = √100 = 10\n1000^(1/3) = ³√1000 = 10\n10 × 10 = 100",
+                    hint: "เปลี่ยนให้อยู่ในรูปราก",
                     formulaUsed: "a^(1/n) = ⁿ√a",
-                    timeLimit: 70
-                },
-                {
-                    question: "ข้อใดถูกต้อง?",
-                    expression: "",
-                    options: [
-                        "5³ × 5² = 5⁶",
-                        "4⁰ + 4⁰ = 0", 
-                        "(2³)² = 2⁵",
-                        "8^(2/3) = 4"
-                    ],
-                    correct: 3,
-                    explanation: "8^(2/3) = (∛8)² = 2² = 4 ถูกต้อง ส่วนตัวเลือกอื่นผิด",
-                    hint: "ตรวจสอบแต่ละตัวเลือกโดยใช้สูตรเลขยกกำลัง",
-                    formulaUsed: "สูตรเลขยกกำลังทั้งหมด",
-                    timeLimit: 90
-                },
-                {
-                    question: "∛27 × √16 มีค่าเท่าใด?",
-                    expression: "∛27 × √16",
-                    options: ["6", "12", "18", "24"],
-                    correct: 1,
-                    explanation: "∛27 = 3, √16 = 4, 3 × 4 = 12",
-                    hint: "คำนวณแต่ละส่วนแยกกันแล้วคูณกัน",
-                    formulaUsed: "ⁿ√a = a^(1/n)",
                     timeLimit: 60
                 },
                 {
-                    question: "ถ้า a = 2²ˣ และ b = 2³ˣ แล้ว ab มีค่าเท่ากับข้อใด?",
-                    expression: "a = 2²ˣ, b = 2³ˣ, ab = ?",
-                    options: ["2⁵ˣ", "2⁶ˣ", "4⁵ˣ", "6ˣ"],
-                    correct: 0,
-                    explanation: "ab = 2²ˣ × 2³ˣ = 2²ˣ⁺³ˣ = 2⁵ˣ",
-                    hint: "ฐานเดียวกันให้นำเลขชี้กำลังมาบวกกัน",
-                    formulaUsed: "aᵐ × aⁿ = aᵐ⁺ⁿ",
-                    timeLimit: 65
+                    question: "ข้อใดถูกต้อง?",
+                    expression: "พิจารณาข้อความ",
+                    options: ["2³ < 3²", "2⁴ = 4²", "(-2)² < -2²", "3⁰ = 0"],
+                    correct: 1,
+                    explanation: "ก. 8 < 9 (จริง), ข. 16 = 16 (จริง)\nแต่ตัวเลือก ข เป็นสมการที่ถูกต้องชัดเจนที่สุดในบริบทนี้\n(หมายเหตุ: โจทย์อาจมีคำตอบถูกหลายข้อ แต่ ข. คือ 2⁴=16, 4²=16 เท่ากันแน่นอน)",
+                    hint: "คำนวณค่าของแต่ละข้อ",
+                    formulaUsed: "การเปรียบเทียบ",
+                    timeLimit: 60
                 },
                 {
-                    question: "จงหาค่าของ (3ⁿ⁺² - 3ⁿ⁺¹) ÷ 3ⁿ",
-                    expression: "(3ⁿ⁺² - 3ⁿ⁺¹) ÷ 3ⁿ",
+                    question: "(3ⁿ⁺² - 3ⁿ⁺¹)/3ⁿ มีค่าเท่ากับเท่าใด?",
+                    expression: "(3ⁿ⁺² - 3ⁿ⁺¹)/3ⁿ",
                     options: ["2", "3", "6", "9"],
                     correct: 2,
                     explanation: "(3ⁿ⁺² - 3ⁿ⁺¹)/3ⁿ = 3ⁿ(3² - 3¹)/3ⁿ = 9 - 3 = 6",
@@ -1922,42 +1642,32 @@
         const explanationBox = document.getElementById('explanationBox');
         const explanationContent = document.getElementById('explanationContent');
         const modeCards = document.querySelectorAll('.mode-card');
-        const confettiContainer = document.getElementById('confettiContainer');
+
+        // Setup Event Listeners
+        function setupEventListeners() {
+            submitBtn.addEventListener('click', submitAnswer);
+            nextBtn.addEventListener('click', nextQuestion);
+            hintBtn.addEventListener('click', showHint);
+            restartBtn.addEventListener('click', initGame);
+            
+            modeCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // อัพเดท UI เลือกโหมด
+                    modeCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    
+                    // เปลี่ยนโหมด
+                    gameState.mode = card.dataset.mode;
+                    
+                    // เริ่มเกมใหม่
+                    initGame();
+                });
+            });
+        }
 
         // เริ่มเกม
         function initGame() {
-            // รีเซ็ตสถานะเกม
-            resetGameState();
-            
-            // โหลดคำถามตามโหมด
-            loadQuestionsForMode();
-            
-            // สับเปลี่ยนคำถาม
-            shuffleQuestions();
-            
-            // อัพเดท UI
-            updateUI();
-            
-            // เริ่มจับเวลา
-            startTimer();
-            
-            // แสดงคำถามแรก
-            loadQuestion();
-            
-            // ซ่อง hint box และ explanation box
-            hintBox.classList.remove('show');
-            explanationBox.classList.remove('show');
-            
-            // อัพเดท progress
-            updateProgress();
-            
-            // เริ่มเกม
-            gameState.gameActive = true;
-            gameState.startTime = new Date();
-        }
-
-        // รีเซ็ตสถานะเกม
-        function resetGameState() {
+            // รีเซ็ตค่าสถานะ
             gameState.score = 0;
             gameState.correct = 0;
             gameState.wrong = 0;
@@ -1966,23 +1676,35 @@
             gameState.selectedAnswer = null;
             gameState.isAnswered = false;
             gameState.hintsUsed = 0;
-            gameState.achievements = [];
+            gameState.gameActive = true;
             gameState.streak = 0;
-            gameState.maxStreak = 0;
-            gameState.questions = [];
+            gameState.achievements = [];
             
-            if (gameState.timer) {
-                clearInterval(gameState.timer);
-                gameState.timer = null;
-            }
+            // เลือกคำถามตามโหมด
+            gameState.questions = [...questionData[gameState.mode]];
+            
+            // สลับลำดับคำถาม (Shuffle)
+            shuffleQuestions();
+            
+            // รีเซ็ตเวลา
+            if (gameState.timer) clearInterval(gameState.timer);
+            startTimer();
+            
+            // โหลดคำถามข้อแรก
+            loadQuestion();
+            
+            // อัพเดท UI
+            updateUI();
+            
+            // ซ่อน hint และ explanation
+            hintBox.classList.remove('show');
+            explanationBox.classList.remove('show');
+            
+            // เลื่อนหน้าจอไปที่ส่วนเกม
+            gameArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
-        // โหลดคำถามตามโหมด
-        function loadQuestionsForMode() {
-            gameState.questions = [...questionDatabase[gameState.mode]];
-        }
-
-        // สับเปลี่ยนคำถาม
+        // สลับคำถาม
         function shuffleQuestions() {
             for (let i = gameState.questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -1996,7 +1718,7 @@
                 endGame();
                 return;
             }
-            
+
             const question = gameState.questions[gameState.currentQuestion];
             
             // อัพเดท UI
@@ -2016,7 +1738,7 @@
             nextBtn.disabled = true;
             hintBtn.disabled = false;
             
-            // ซ่อง hint box และ explanation box
+            // ซ่อน hint box และ explanation box
             hintBox.classList.remove('show');
             explanationBox.classList.remove('show');
             
@@ -2070,7 +1792,18 @@
             
             const question = gameState.questions[gameState.currentQuestion];
             const isCorrect = gameState.selectedAnswer === question.correct;
-            
+
+            // ==========================================
+            // [ใหม่] ส่วนที่เพิ่ม: เล่นเสียงเมื่อตอบผิด
+            // ==========================================
+            if (!isCorrect) {
+                // ไฟล์เสียง Screen-Recording-2026-02-13-215356.mp3
+                const wrongSound = new Audio('Screen-Recording-2026-02-13-215356.mp3');
+                wrongSound.volume = 0.8; 
+                wrongSound.play().catch(e => console.error("ไม่สามารถเล่นเสียงได้:", e));
+            }
+            // ==========================================
+
             // แสดงผลคำตอบ
             showAnswerResult(question, isCorrect);
             
@@ -2087,7 +1820,7 @@
             nextBtn.disabled = false;
             submitBtn.disabled = true;
             hintBtn.disabled = true;
-            
+
             // อัพเดท streak
             if (isCorrect) {
                 gameState.streak++;
@@ -2097,39 +1830,49 @@
             } else {
                 gameState.streak = 0;
             }
-            
+
             // ตรวจสอบ achievements
             checkAchievements();
         }
 
         // แสดงผลคำตอบ
         function showAnswerResult(question, isCorrect) {
-            document.querySelectorAll('.option').forEach((opt, index) => {
-                opt.style.cursor = 'default';
+            gameState.isAnswered = true;
+            
+            const options = document.querySelectorAll('.option');
+            
+            // แสดงเฉลย
+            options.forEach((opt, index) => {
+                opt.classList.remove('selected');
                 
                 if (index === question.correct) {
                     opt.classList.add('correct');
-                } else if (index === gameState.selectedAnswer && index !== question.correct) {
+                } else if (index === gameState.selectedAnswer && !isCorrect) {
                     opt.classList.add('incorrect');
                 }
+                
+                // ปิดการคลิก
+                opt.style.pointerEvents = 'none';
             });
-            
-            gameState.isAnswered = true;
         }
 
         // อัพเดทคะแนนและสถิติ
         function updateScoreAndStats(isCorrect, question) {
             if (isCorrect) {
-                gameState.score += 10;
                 gameState.correct++;
+                // คำนวณคะแนนตามเวลาที่เหลือและความยาก
+                const baseScore = 10;
+                const difficultyMultiplier = {
+                    basic: 1,
+                    algebra: 1.5,
+                    challenge: 2,
+                    exam: 2.5
+                };
                 
-                // โบนัสสำหรับโหมดยาก
-                if (gameState.mode === 'challenge' || gameState.mode === 'exam') {
-                    gameState.score += 5;
-                }
+                gameState.score += Math.round(baseScore * difficultyMultiplier[gameState.mode]);
                 
-                // โบนัส streak
-                if (gameState.streak >= 3) {
+                // Bonus Streak
+                if (gameState.streak > 2) {
                     gameState.score += gameState.streak * 2;
                 }
             } else {
@@ -2140,27 +1883,16 @@
         // แสดงคำอธิบาย
         function showExplanation(question) {
             explanationContent.innerHTML = `
-                <div class="step">
-                    <strong>วิธีทำ:</strong> ${question.explanation}
-                </div>
-                <div class="step">
-                    <strong>สูตรที่ใช้:</strong> ${question.formulaUsed}
-                </div>
-                <div class="step">
-                    <strong>เทคนิค:</strong> ${getTechniqueTip(question)}
-                </div>
+                <div style="margin-bottom: 10px;"><strong>ผลลัพธ์:</strong> ${question.correct === gameState.selectedAnswer ? '<span style="color:var(--success)">ถูกต้อง! เก่งมาก</span>' : '<span style="color:var(--accent)">ผิดจ้า พยายามใหม่นะ</span>'}</div>
+                <div class="step"><strong>เฉลย:</strong> ${question.explanation}</div>
+                <div style="font-size: 0.9rem; color: #666; margin-top: 10px;">สูตรที่ใช้: ${question.formulaUsed}</div>
             `;
-            
             explanationBox.classList.add('show');
         }
 
-        // ไปข้อต่อไป
+        // ไปยังข้อถัดไป
         function nextQuestion() {
             gameState.currentQuestion++;
-            
-            // ลบ confetti
-            removeConfetti();
-            
             if (gameState.currentQuestion < gameState.questions.length) {
                 loadQuestion();
             } else {
@@ -2175,8 +1907,8 @@
             }
             
             const question = gameState.questions[gameState.currentQuestion];
-            
             gameState.hintsUsed++;
+            
             hintContent.textContent = question.hint;
             hintBox.classList.add('show');
             
@@ -2185,6 +1917,7 @@
             
             // ลดคะแนนสำหรับการใช้คำใบ้
             gameState.score = Math.max(0, gameState.score - 3);
+            
             updateUI();
             
             // ถ้าใช้คำใบ้ครบแล้ว
@@ -2242,7 +1975,6 @@
         // จบเกม
         function endGame() {
             gameState.gameActive = false;
-            
             if (gameState.timer) {
                 clearInterval(gameState.timer);
                 gameState.timer = null;
@@ -2270,57 +2002,40 @@
             const accuracy = (gameState.correct / gameState.questions.length) * 100;
             if (accuracy >= 90) {
                 gameState.score += 50;
-                gameState.achievements.push("แม่นยำเลิศ");
-            } else if (accuracy >= 70) {
-                gameState.score += 30;
-                gameState.achievements.push("แม่นยำดี");
-            } else if (accuracy >= 50) {
-                gameState.score += 10;
-                gameState.achievements.push("ผ่านเกณฑ์");
-            }
-            
-            // โบนัส streak สูงสุด
-            if (gameState.maxStreak >= 5) {
-                gameState.score += 20;
-                gameState.achievements.push("เทพต่อเนื่อง");
-            }
-            
-            // โบนัสไม่ใช้คำใบ้
-            if (gameState.hintsUsed === 0) {
-                gameState.score += 15;
-                gameState.achievements.push("ไม่ใช้คำใบ้");
+                gameState.achievements.push("แม่นยำขั้นเทพ (90%+)");
+            } else if (accuracy === 100) {
+                gameState.score += 100;
+                gameState.achievements.push("สมบูรณ์แบบ (100%)");
             }
         }
 
-        // แสดงผลลัพธ์
+        // แสดงหน้าจอผลลัพธ์
         function showResult() {
-            const accuracy = (gameState.correct / gameState.questions.length) * 100;
-            const timeSpent = gameState.time;
+            const accuracy = Math.round((gameState.correct / gameState.questions.length) * 100) || 0;
             
             const resultHTML = `
                 <div class="result-screen">
-                    <h2 class="result-title">🎉 เสร็จสิ้นการทดสอบ! 🎉</h2>
-                    <div class="result-score">${gameState.score} คะแนน</div>
-                    
-                    <p class="result-message">
+                    <h2 class="result-title">จบเกมแล้ว!</h2>
+                    <div class="result-score">${gameState.score}</div>
+                    <div class="result-message">
                         ${getResultMessage(accuracy)}
-                    </p>
+                    </div>
                     
                     <div class="result-stats">
                         <div class="result-stat">
-                            <div class="stat-value">${gameState.correct}</div>
+                            <div class="stat-value" style="color: var(--success)">${gameState.correct}</div>
                             <div class="stat-label">ตอบถูก</div>
                         </div>
                         <div class="result-stat">
-                            <div class="stat-value">${gameState.wrong}</div>
+                            <div class="stat-value" style="color: var(--accent)">${gameState.wrong}</div>
                             <div class="stat-label">ตอบผิด</div>
                         </div>
                         <div class="result-stat">
-                            <div class="stat-value">${Math.round(accuracy)}%</div>
+                            <div class="stat-value" style="color: var(--primary)">${accuracy}%</div>
                             <div class="stat-label">ความแม่นยำ</div>
                         </div>
                         <div class="result-stat">
-                            <div class="stat-value">${timeSpent}s</div>
+                            <div class="stat-value" style="color: var(--warning)">${gameState.time}s</div>
                             <div class="stat-label">เวลาที่ใช้</div>
                         </div>
                     </div>
@@ -2330,10 +2045,10 @@
                     </div>
                     
                     ${gameState.achievements.length > 0 ? `
-                        <div style="margin: 30px 0;">
-                            <h3 style="color: var(--secondary); margin-bottom: 15px;">🏆 ความสำเร็จ:</h3>
-                            ${gameState.achievements.map(ach => `<span class="achievement">${ach}</span>`).join('')}
-                        </div>
+                    <div style="margin: 30px 0;">
+                        <h3 style="color: var(--secondary); margin-bottom: 15px;">🏆 ความสำเร็จ:</h3>
+                        ${gameState.achievements.map(ach => `<span class="achievement">${ach}</span>`).join('')}
+                    </div>
                     ` : ''}
                     
                     <div style="margin: 30px 0;">
@@ -2352,7 +2067,7 @@
                         <button class="btn btn-primary" id="changeModeBtn">
                             <i class="fas fa-exchange-alt"></i> เปลี่ยนโหมด
                         </button>
-                        <button class="btn btn-accent" id="reviewBtn">
+                         <button class="btn btn-accent" id="reviewBtn">
                             <i class="fas fa-book-open"></i> ทบทวนสูตร
                         </button>
                     </div>
@@ -2365,122 +2080,60 @@
             document.getElementById('playAgainBtn').addEventListener('click', () => {
                 initGame();
                 setTimeout(() => {
-                    const originalGameArea = document.createElement('div');
-                    originalGameArea.className = 'game-area';
-                    originalGameArea.id = 'gameArea';
-                    originalGameArea.innerHTML = `
-                        <div class="game-header">
-                            <h2 class="game-title">
-                                <i class="fas fa-gamepad"></i>
-                                <span id="gameTitle">พื้นฐานเลขยกกำลัง</span>
-                            </h2>
-                            <div class="stats">
-                                <div class="stat-box">
-                                    <i class="fas fa-star"></i>
-                                    <div>
-                                        <div class="stat-value" id="score">0</div>
-                                        <div class="stat-label">คะแนน</div>
-                                    </div>
-                                </div>
-                                <div class="stat-box">
-                                    <i class="fas fa-check-circle"></i>
-                                    <div>
-                                        <div class="stat-value" id="correct">0</div>
-                                        <div class="stat-label">ถูก</div>
-                                    </div>
-                                </div>
-                                <div class="stat-box">
-                                    <i class="fas fa-times-circle"></i>
-                                    <div>
-                                        <div class="stat-value" id="wrong">0</div>
-                                        <div class="stat-label">ผิด</div>
-                                    </div>
-                                </div>
-                                <div class="stat-box">
-                                    <i class="fas fa-clock"></i>
-                                    <div>
-                                        <div class="stat-value" id="time">0</div>
-                                        <div class="stat-label">วินาที</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-container">
-                            <div class="progress-header">
-                                <span>ความคืบหน้า</span>
-                                <span id="progressText">0/10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progressFill"></div>
-                            </div>
-                        </div>
-                        <div class="question-area">
-                            <div class="question-number" id="questionNumber">ข้อที่ 1</div>
-                            <div class="question-text" id="questionText">กำลังโหลดคำถาม...</div>
-                            <div class="math-expression-container">
-                                <span class="expression-label">นิพจน์ทางคณิตศาสตร์:</span>
-                                <div class="math-expression" id="mathExpression"></div>
-                            </div>
-                        </div>
-                        <div class="options-grid" id="optionsGrid"></div>
-                        <div class="hint-box" id="hintBox">
-                            <div class="hint-header">
-                                <i class="fas fa-lightbulb"></i>
-                                <strong>คำใบ้:</strong>
-                            </div>
-                            <div id="hintContent"></div>
-                        </div>
-                        <div class="explanation-box" id="explanationBox">
-                            <div class="explanation-header">
-                                <i class="fas fa-book-open"></i>
-                                <h3>คำอธิบายและวิธีทำ</h3>
-                            </div>
-                            <div class="explanation-content" id="explanationContent"></div>
-                        </div>
-                        <div class="controls">
-                            <button class="btn btn-success" id="submitBtn" disabled>
-                                <i class="fas fa-check"></i> ยืนยันคำตอบ
-                            </button>
-                            <button class="btn btn-primary" id="nextBtn" disabled>
-                                <i class="fas fa-forward"></i> ข้อต่อไป
-                            </button>
-                            <button class="btn btn-warning" id="hintBtn">
-                                <i class="fas fa-lightbulb"></i> คำใบ้ (ใช้ได้ 3 ครั้ง)
-                            </button>
-                            <button class="btn btn-accent" id="restartBtn">
-                                <i class="fas fa-redo"></i> เริ่มเกมใหม่
-                            </button>
-                        </div>
-                    `;
-                    
-                    const container = document.querySelector('.container');
-                    const formulaBox = document.querySelector('.formula-box');
-                    container.insertBefore(originalGameArea, formulaBox);
-                    
-                    // Re-initialize game
-                    initGame();
-                    setupEventListeners();
+                    location.reload(); 
                 }, 100);
             });
             
             document.getElementById('changeModeBtn').addEventListener('click', () => {
-                location.reload();
+                location.reload(); // รีโหลดเพื่อกลับไปหน้าเลือกโหมด
             });
             
-            document.getElementById('reviewBtn').addEventListener('click', () => {
-                document.querySelector('.formula-box').scrollIntoView({ behavior: 'smooth' });
+             document.getElementById('reviewBtn').addEventListener('click', () => {
+                 document.querySelector('.formula-box').scrollIntoView({ behavior: 'smooth' });
             });
+        }
+        
+        // สร้าง Confetti (เอฟเฟกต์กระดาษโปรย)
+        function createConfetti() {
+            const colors = ['#e74c3c', '#3498db', '#f1c40f', '#2ecc71', '#9b59b6'];
             
-            // Animate accuracy bar
-            setTimeout(() => {
-                const accuracyFill = document.querySelector('.accuracy-fill');
-                if (accuracyFill) {
-                    accuracyFill.style.width = `${accuracy}%`;
-                }
-            }, 100);
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.top = '-10px';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.zIndex = '9999';
+                confetti.style.pointerEvents = 'none';
+                
+                const duration = Math.random() * 3 + 2;
+                confetti.style.animation = `fall ${duration}s linear forwards`;
+                
+                document.body.appendChild(confetti);
+                
+                // ลบเมื่อตกถึงพื้น
+                setTimeout(() => {
+                    confetti.remove();
+                }, duration * 1000);
+            }
+            
+            // เพิ่ม keyframe ถ้ายังไม่มี
+            if (!document.getElementById('confettiStyle')) {
+                const style = document.createElement('style');
+                style.id = 'confettiStyle';
+                style.innerHTML = `
+                    @keyframes fall {
+                        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+                        100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
         }
 
-        // ตรวจสอบ achievements
+        // ตรวจสอบ Achievements
         function checkAchievements() {
             // Streak achievements
             if (gameState.streak === 5) {
@@ -2488,31 +2141,20 @@
                     gameState.achievements.push("5 ตอบติดต่อกัน");
                 }
             } else if (gameState.streak === 10) {
-                if (!gameState.achievements.includes("10 ตอบติดต่อกัน")) {
+                 if (!gameState.achievements.includes("10 ตอบติดต่อกัน")) {
                     gameState.achievements.push("10 ตอบติดต่อกัน");
                 }
             }
             
             // Score achievements
             if (gameState.score >= 100) {
-                if (!gameState.achievements.includes("100 คะแนน")) {
+                 if (!gameState.achievements.includes("100 คะแนน")) {
                     gameState.achievements.push("100 คะแนน");
                 }
             }
         }
 
         // ฟังก์ชันช่วยเหลือ
-        function getTechniqueTip(question) {
-            const tips = {
-                basic: "ลองคูณทีละขั้นตอนหรือใช้สูตรที่เหมาะสม",
-                algebra: "ทำให้ฐานเท่ากันก่อนจะทำให้การคำนวณง่ายขึ้น",
-                challenge: "แยกตัวประกอบหรือเปลี่ยนรูปโจทย์ให้ง่ายขึ้น",
-                exam: "อ่านโจทย์อย่างระมัดระวังและคิดทีละขั้นตอน"
-            };
-            
-            return tips[gameState.mode] || "ตรวจสอบว่าฐานเท่ากันหรือไม่ก่อนใช้สูตร";
-        }
-
         function getResultMessage(accuracy) {
             if (accuracy === 100) {
                 return "ยอดเยี่ยมมาก! 🏆 คุณตอบถูกทุกข้อ แสดงว่าคุณเชี่ยวชาญเรื่องเลขยกกำลังระดับ ม.4 แล้ว";
@@ -2520,79 +2162,10 @@
                 return "ดีมาก! ⭐ คุณมีความเข้าใจเรื่องเลขยกกำลังเป็นอย่างดี เก่งมาก!";
             } else if (accuracy >= 60) {
                 return "ดี! 👍 คุณมีความเข้าใจพื้นฐานดี แต่ยังมีบางจุดที่ควรทบทวนเพิ่มเติม";
-            } else if (accuracy >= 40) {
-                return "พอใช้ได้ 😊 ลองทบทวนสูตรพื้นฐานและฝึกทำแบบฝึกหัดเพิ่มเติมนะ";
             } else {
-                return "พยายามอีกนิด! 💪 ลองทบทวนสูตรพื้นฐานอีกครั้งและฝึกฝนให้มากขึ้น";
+                return "ไม่ต้องเสียใจ! 💪 การฝึกฝนจะทำให้เก่งขึ้น ลองทบทวนสูตรแล้วเล่นใหม่อีกครั้งนะ";
             }
         }
-
-        // สร้าง confetti
-        function createConfetti() {
-            const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
-            
-            for (let i = 0; i < 100; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.left = `${Math.random() * 100}%`;
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.width = `${Math.random() * 10 + 5}px`;
-                confetti.style.height = `${Math.random() * 10 + 5}px`;
-                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-                
-                const animation = confetti.animate([
-                    { top: '-20px', transform: `rotate(0deg)`, opacity: 1 },
-                    { 
-                        top: `${Math.random() * 100 + 50}%`, 
-                        transform: `rotate(${Math.random() * 720}deg)`,
-                        opacity: 0.7
-                    }
-                ], {
-                    duration: Math.random() * 3000 + 2000,
-                    easing: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)'
-                });
-                
-                confettiContainer.appendChild(confetti);
-                
-                animation.onfinish = () => {
-                    confetti.remove();
-                };
-            }
-        }
-
-        // ลบ confetti
-        function removeConfetti() {
-            confettiContainer.innerHTML = '';
-        }
-
-        // Setup Event Listeners
-        function setupEventListeners() {
-            // ปุ่มในเกม
-            const submitBtn = document.getElementById('submitBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const hintBtn = document.getElementById('hintBtn');
-            const restartBtn = document.getElementById('restartBtn');
-            
-            if (submitBtn) submitBtn.addEventListener('click', submitAnswer);
-            if (nextBtn) nextBtn.addEventListener('click', nextQuestion);
-            if (hintBtn) hintBtn.addEventListener('click', showHint);
-            if (restartBtn) restartBtn.addEventListener('click', initGame);
-        }
-
-        // Event Listeners
-        modeCards.forEach(card => {
-            card.addEventListener('click', () => {
-                // อัพเดท active card
-                modeCards.forEach(c => c.classList.remove('active'));
-                card.classList.add('active');
-                
-                // เปลี่ยนโหมด
-                gameState.mode = card.dataset.mode;
-                
-                // เริ่มเกมใหม่
-                initGame();
-            });
-        });
 
         // กำหนด event listeners เมื่อโหลดหน้าเว็บ
         window.addEventListener('DOMContentLoaded', () => {
